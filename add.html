@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="bootstrap.min.css">
+  <title>ADD NEW QUIZ SET</title>
+  <style>
+    body {
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    #dataInput {
+      width: 80vw;
+    }
+    #contentInput {
+      margin-bottom: 20px;
+    }
+    label {
+      font-size: 20px;
+    }
+    textarea:focus::placeholder{
+      color: transparent;
+    }
+    #homeBtn {
+      float: left;
+    }
+    #saveBtn {
+      float: right;
+    }
+  </style>
+</head>
+<body>
+  <article id="dataInput">
+    <div id="titleInput" class="form-group">
+      <label for="exampleTextarea" class="form-label mt-4">Enter title here</label>
+      <textarea class="form-control" id="exampleTextarea" rows="1" placeholder="Ex) 미니학습지 스페인어 1-1" required></textarea>
+    </div>
+    <div id="contentInput" class="form-group">
+      <label for="exampleTextarea" class="form-label mt-4">Copy & Paste your data</label>
+      <textarea class="form-control" id="exampleTextarea" rows="15" placeholder="단어 1	뜻 1&#13;&#10;단어 2	뜻 2&#13;&#10;단어 3	뜻 3&#13;&#10;. . ." required></textarea>
+    </div>
+    <button id="homeBtn" class="btn btn-primary" onclick="location.href='index.html'">HOME</button>
+    <button id="saveBtn" class="btn btn-primary">SAVE</button>
+  </article>  
+</body>
+</html>
