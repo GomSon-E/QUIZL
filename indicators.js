@@ -8,7 +8,7 @@ function myAlert(content) {
                             <span aria-hidden="true"></span>
                         </button>
                         </div>
-                        <div class="toast-body">
+                        <div class="toast-body" style="padding: 20px; font-size: 18px;">
                         ${content}
                         </div>
                     </div>
@@ -32,7 +32,7 @@ function myConfirm(content) {
                                 <span aria-hidden="true"></span>
                             </button>
                             </div>
-                            <div class="toast-body">
+                            <div class="toast-body" style="padding: 20px; font-size: 18px;">
                             ${content}
                             </div>
                             <button type="button" id="confirmBtn" class="btn btn-primary" style="position: absolute; right : 110px; bottom: 10px">Confirm</button>
