@@ -45,5 +45,27 @@
     <button id="homeBtn" class="btn btn-primary" onclick="location.href='index.html'">HOME</button>
     <button id="saveBtn" class="btn btn-primary">SAVE</button>
   </article>  
+
+  <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+  <script>
+    $("#saveBtn").click(function() {
+      var title = $("#titleInput > textarea").val()
+      var content = $("#contentInput > textarea").val()
+
+      if (!title) {
+        alert("!! THERE IS NO TITLE !!")
+        return
+      }
+      else if (!content) {
+        alert("!! THERE IS NO DATA !!")
+        return
+      }
+
+      if(confirm("[ " + title +" ] 을/를 저장하시겠습니까?")) {
+        alert("저장되었습니다.")
+        location.href='index.html'
+      }
+    })
+  </script>
 </body>
 </html>
