@@ -47,22 +47,23 @@
   </article>  
 
   <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+  <script src="indicators.js"></script>
   <script>
     $("#saveBtn").click(function() {
       var title = $("#titleInput > textarea").val()
       var content = $("#contentInput > textarea").val()
 
       if (!title) {
-        alert("!! THERE IS NO TITLE !!")
+        myAlert("There is no title !!")
         return
       }
       else if (!content) {
-        alert("!! THERE IS NO DATA !!")
+        myAlert("There is no data !!")
         return
       }
 
-      if(confirm("[ " + title +" ] 을/를 저장하시겠습니까?")) {
-        alert("저장되었습니다.")
+      if(myConfirm("Do you want to save [ " + title +" ] ??")) {
+        myAlert("저장되었습니다.")
         location.href='index.html'
       }
     })
