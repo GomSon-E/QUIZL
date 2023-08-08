@@ -3,8 +3,12 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="bootstrap.min.css">
+  
   <title>ADD NEW QUIZ SET</title>
+
+  <link rel="stylesheet" href="bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.8.2/css/all.min.css"/>
+
   <style>
     body {
       height: 100vh;
@@ -21,6 +25,9 @@
     label {
       font-size: 20px;
     }
+    label i {
+      margin-right: 7px;
+    }
     textarea:focus::placeholder{
       color: transparent;
     }
@@ -35,15 +42,15 @@
 <body>
   <article id="dataInput">
     <div id="titleInput" class="form-group">
-      <label for="exampleTextarea" class="form-label mt-4">Enter title here</label>
+      <label for="exampleTextarea" class="form-label mt-4"><i class="fas fa-star"></i>Enter title here</label>
       <textarea class="form-control" id="exampleTextarea" rows="1" placeholder="Ex) 미니학습지 스페인어 1-1" required></textarea>
     </div>
     <div id="contentInput" class="form-group">
-      <label for="exampleTextarea" class="form-label mt-4">Copy & Paste your data</label>
+      <label for="exampleTextarea" class="form-label mt-4"><i class="fas fa-file-excel"></i>Copy & Paste your data</label>
       <textarea class="form-control" id="exampleTextarea" rows="15" placeholder="단어 1	뜻 1&#13;&#10;단어 2	뜻 2&#13;&#10;단어 3	뜻 3&#13;&#10;. . ." required></textarea>
     </div>
-    <button id="homeBtn" class="btn btn-primary" onclick="location.href='index.html'">HOME</button>
-    <button id="saveBtn" class="btn btn-primary">SAVE</button>
+    <button id="homeBtn" class="btn btn-primary" onclick="location.href='index.html'"><i class="fas fa-home"></i></button>
+    <button id="saveBtn" class="btn btn-primary"><i class="fas fa-save"></i></button>
   </article>  
 
   <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>

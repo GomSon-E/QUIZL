@@ -3,8 +3,11 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="bootstrap.min.css">
   <title>Quizl - 퀴즐</title> 
+
+  <link rel="stylesheet" href="bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.8.2/css/all.min.css"/>
+
   <style>
     body {
       height: 100vh;
@@ -19,6 +22,9 @@
       margin-bottom: 50px;
       font-weight: bolder;
     }
+    i {
+      margin-right: 7px;
+    }
     #addBtn {
       margin-bottom: 20px;
     }
@@ -28,8 +34,14 @@
   <main>
     <h1>Welcome to Quizl</h1>
     <div class="d-grid gap-2">    
-      <button id="addBtn" class="btn btn-lg btn-primary" type="button" onclick="location.href='add.html'">ADD NEW QUIZ SET</button>
-      <button id="studyBtn" class="btn btn-lg btn-primary" type="button" onclick="location.href='list.html'">STUDY QUIZ SET</button>
+      <button id="addBtn" class="btn btn-lg btn-primary" type="button" onclick="location.href='add.html'">
+        <i class="fas fa-plus-square"></i>
+        ADD NEW QUIZ SET
+      </button>
+      <button id="studyBtn" class="btn btn-lg btn-primary" type="button" onclick="location.href='list.html'">
+        <i class="fas fa-pen-square"></i>
+        STUDY QUIZ SET
+      </button>
     </div>
   </main>
 </body>
