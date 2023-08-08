@@ -20,7 +20,7 @@
       font-size: 20px;
     }
 
-    #card {
+    .card {
       width: 50vw;
       height: 50vh;
       display: flex;
@@ -29,43 +29,48 @@
       margin-bottom: 20px;
     }
 
-    #cardContent {
+    .card-content {
       width: 90%;
       text-align: center;
       font-size: 25px;
     } 
 
-    #cardBtns {
+    .cardBtns {
       display: flex;
       justify-content: space-between;
     }
 
-    #cardBtns > #cardBtns-center > #prevBtn {
+    .cardBtns > .cardBtns-center > #prevBtn {
       margin-right: 10px;
     }
   </style>
 </head>
-<body>
-  <article id="cardView">
+<body id="study">
+  <main>
+
     <h1>미니스페인어 1-1</h1>
-    <div id="card" class="toast show">
-      <div id="cardContent" class="toast-body">
+
+    <div class="card toast show">
+      <div class="card-content toast-body">
         Hello, world! This is a toast message.
       </div>
     </div>
-    <div id="cardBtns">
-      <div id="cardBtns-left">
-        <button id="homeBtn" class="btn btn-primary" onclick="location.href='list.html'"><i class="fas fa-list-ul"></i></button>
+
+    <div class="cardBtns">
+      
+      <div class="cardBtns-left">
+        <button id="listBtn" class="btn btn-primary" onclick="location.href='list.html'"><i class="fas fa-list-ul"></i></button>
       </div>
-      <div id="cardBtns-center">
+      <div class="cardBtns-center">
         <button id="prevBtn" type="button" class="btn btn-primary"><i class="far fa-hand-point-left"></i></button>
         <button id="nextBtn" type="button" class="btn btn-primary"><i class="far fa-hand-point-right"></i></button>
       </div>   
-      <div id="cardBtns-right">
+      <div class="cardBtns-right">
         <button id="shuffleBtn" class="btn btn-primary"><i class="fas fa-random"></i></button>
       </div>
+
     </div>
      
-  </article>
+  </main>
 </body>
 </html>
