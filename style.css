@@ -1,0 +1,107 @@
+@import url(bootstrap.min.css);
+@import url(https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.8.2/css/all.min.css);
+
+body {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/*
+    HOME 
+*/
+#home main {
+  text-align: center;
+}
+#home h1 {
+  margin-bottom: 50px;
+  font-weight: bolder;
+}
+#home button > i {
+  margin-right: 7px;
+}
+#home #addBtn {
+  margin-bottom: 20px;
+}
+
+/* 
+    ADD
+*/
+#add > main {
+  width: 80vw;
+}
+#add .data-form {
+  margin-bottom: 20px;
+}
+#add .form-group > label {
+  font-size: 20px;
+}
+#add .form-group > label i {
+  margin-right: 7px;
+}
+#add textarea:focus::placeholder{
+  color: transparent;
+}
+#add #homeBtn {
+  float: left;
+}
+#add #saveBtn {
+  float: right;
+}
+
+/* 
+    LIST
+*/
+#list > main {
+  width: 80vw;
+}
+
+#list label {
+  font-size: 20px;
+}
+
+#list label i {
+  margin-right: 7px;
+}
+
+#list #myGrid {
+  height: 60vh;
+  width: 100%;
+  margin: 0 auto 20px;
+}
+
+#list #myGrid .ag-theme-alpine .ag-header {
+  font-size: 15px;
+}
+
+/* 
+    STUDY
+*/
+#study h1 {
+  font-size: 20px;
+}
+
+#study .card {
+  width: 50vw;
+  height: 50vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+#study .card-content {
+  width: 90%;
+  text-align: center;
+  font-size: 25px;
+} 
+
+#study .cardBtns {
+  display: flex;
+  justify-content: space-between;
+}
+
+#study .cardBtns > .cardBtns-center > #prevBtn {
+  margin-right: 10px;
+}
