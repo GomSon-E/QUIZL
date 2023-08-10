@@ -16,49 +16,49 @@
       justify-content: center;
       align-items: center;
     }
-    #dataInput {
+    #add > main {
       width: 80vw;
     }
-    #contentInput {
+    #add .data-form {
       margin-bottom: 20px;
     }
-    label {
+    #add .form-group > label {
       font-size: 20px;
     }
-    label i {
+    #add .form-group > label i {
       margin-right: 7px;
     }
-    textarea:focus::placeholder{
+    #add textarea:focus::placeholder{
       color: transparent;
     }
-    #homeBtn {
+    #add #homeBtn {
       float: left;
     }
-    #saveBtn {
+    #add #saveBtn {
       float: right;
     }
   </style>
 </head>
-<body>
-  <article id="dataInput">
-    <div id="titleInput" class="form-group">
-      <label for="exampleTextarea" class="form-label mt-4"><i class="fas fa-star"></i>Enter title here</label>
-      <textarea class="form-control" id="exampleTextarea" rows="1" placeholder="Ex) 미니학습지 스페인어 1-1" required></textarea>
+<body id="add">
+  <main>
+    <div class="form-group title-form">
+      <label for="titleTextarea" class="form-label mt-4"><i class="fas fa-star"></i>Enter title here</label>
+      <textarea class="form-control" id="titleTextarea" rows="1" placeholder="Ex) 미니학습지 스페인어 1-1" required></textarea>
     </div>
-    <div id="contentInput" class="form-group">
-      <label for="exampleTextarea" class="form-label mt-4"><i class="fas fa-file-excel"></i>Copy & Paste your data</label>
-      <textarea class="form-control" id="exampleTextarea" rows="15" placeholder="단어 1	뜻 1&#13;&#10;단어 2	뜻 2&#13;&#10;단어 3	뜻 3&#13;&#10;. . ." required></textarea>
+    <div class="form-group data-form">
+      <label for="dataTextarea" class="form-label mt-4"><i class="fas fa-file-excel"></i>Copy & Paste your data</label>
+      <textarea class="form-control" id="dataTextarea" rows="15" placeholder="단어 1	뜻 1&#13;&#10;단어 2	뜻 2&#13;&#10;단어 3	뜻 3&#13;&#10;. . ." required></textarea>
     </div>
     <button id="homeBtn" class="btn btn-primary" onclick="location.href='index.html'"><i class="fas fa-home"></i></button>
     <button id="saveBtn" class="btn btn-primary"><i class="fas fa-save"></i></button>
-  </article>  
+  </main>  
 
   <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
   <script src="indicators.js"></script>
   <script>
     $("#saveBtn").click(function() {
-      var title = $("#titleInput > textarea").val()
-      var content = $("#contentInput > textarea").val()
+      var title = $("#titleTextarea").val()
+      var content = $("#dataTextarea").val()
 
       if (!title) {
         myAlert("There is no title !!")
