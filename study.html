@@ -15,10 +15,10 @@
     
     <div class="card-container">
 
-      <div id="card" class="card">
+      <div id="card" class="card" onclick="cardFlip()">
 
         <!-- card-front -->
-        <div class="card-front toast show">
+        <div class="card-front toast show active">
           <div class="card-content toast-body">
             Hello, world!
           </div>
@@ -51,5 +51,26 @@
     </div>
      
   </main>
+
+  <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+  <script>
+    $(window).keydown(function(e) {
+      if (e.keyCode == 32)  cardFlip()
+    })
+
+    // 카드 플립 기능
+    function cardFlip() { 
+
+      var activeCard = $("#card").children(".active")
+      var inactiveCard = $("#card").children(":not(.active)")
+
+      activeCard.removeClass("active")
+      inactiveCard.addClass("active")
+
+      if (activeCard.hasClass("card-front"))  $("#card").css("transform", "rotateX(180deg)")
+      else $("#card").css("transform", "rotateX(0deg)")    
+
+    }
+  </script>
 </body>
 </html>

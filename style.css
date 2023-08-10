@@ -129,7 +129,3 @@ body {
 #study .cardBtns > .cardBtns-center > #prevBtn {
   margin-right: 10px;
 }
-
-#study .card-container:hover .card {
-  transform: rotateX(180deg);
-}
