@@ -41,8 +41,8 @@
         <button id="listBtn" class="btn btn-primary" onclick="location.href='list.html'"><i class="fas fa-list-ul"></i></button>
       </div>
       <div class="cardBtns-center">
-        <button id="prevBtn" type="button" class="btn btn-primary"><i class="far fa-hand-point-left"></i></button>
-        <button id="nextBtn" type="button" class="btn btn-primary"><i class="far fa-hand-point-right"></i></button>
+        <button id="prevBtn" type="button" class="btn btn-primary" onclick="cardSlide('prev')"><i class="far fa-hand-point-left"></i></button>
+        <button id="nextBtn" type="button" class="btn btn-primary" onclick="cardSlide('next')"><i class="far fa-hand-point-right"></i></button>
       </div>   
       <div class="cardBtns-right">
         <button id="shuffleBtn" class="btn btn-primary"><i class="fas fa-random"></i></button>
@@ -56,6 +56,8 @@
   <script>
     $(window).keydown(function(e) {
       if (e.keyCode == 32)  cardFlip()
+      if (e.keyCode == 37)  cardSlide("prev")
+      if (e.keyCode == 39)  cardSlide("next")
     })
 
     // 카드 플립 기능
@@ -70,6 +72,33 @@
       if (activeCard.hasClass("card-front"))  $("#card").css("transform", "rotateX(180deg)")
       else $("#card").css("transform", "rotateX(0deg)")    
 
+    }
+
+    // 카드 슬라이드 기능
+    function cardSlide(direction) {
+      $("#card").css("transform-style", "flat")
+
+      if (direction == "prev") {
+        $(".card-front").css({
+          "transform" : "rotateY(-80deg)"
+          , "left" : "-250px"
+        })
+      }
+      else {
+        $(".card-front").css({
+          "transform" : "rotateY(80deg)"
+          , "left" : "250px"
+        })
+      }      
+
+      setTimeout(() => {
+        $(".card-front").css({
+          "transition": ".5s"
+          , "transform" : "rotateY(0deg)"
+          , "left" : "0px"
+        })
+      }, 200);
+      
     }
   </script>
 </body>
